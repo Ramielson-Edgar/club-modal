@@ -5,12 +5,13 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
     integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous" />
-  <!--FONTS-->
-  <link rel="stylesheet" href="assets/css/style.css" />
+
+  <link rel="stylesheet" href="/css/intlTelInput.min.css">
+  <link rel="stylesheet" href="/css/style.css" />
 
   <title>Document</title>
 </head>
@@ -21,13 +22,13 @@
     Launch demo modal
   </button>
 
-  <!-- Modal -->
+
 
   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
+    <div class="modal-dialog modal-confirm__dialog">
 
 
-      <div class="modal-content">
+      <div class="modal-content modal-confirm__content">
         <div role="img" class="modal-img">
           <a class="modal__logo mb-5" href="#">
             <img class="img-fluid" src="./adro-fx-logo.svg" alt="company logo" width="252" height="91">
@@ -36,66 +37,87 @@
           </a>
 
 
-          <div class="modal__note-wrapper">
-            <p class="modal__required-notify mb-3">information</p>
-            <p class="modal__note">
-              If you have any questions,you can ask
-              them in the live chat</p>
+          <div class="modal-confirm__note-wrapper">
+            <p class="modal-confirm__required-notify mb-3">Note</p>
+            <p class="modal-confirm__note">
+              All fields are required, please fill them in,
+              if you have any questions,
+              you can ask them in the live chat
+            </p>
           </div>
 
-          <p class="modal__logo-text text-white">More than just <strong>Broker</strong></p>
+          <p class="modal-confirm__logo-text text-white">More than just <strong>Broker</strong></p>
 
         </div>
 
-        <div class="modal__main-content container modal__main-content-confirm">
-          <div class="modal-header modal__confirm-header ">
+        <div class="container modal-confirm__main-content">
+          <div class="modal-confirm__header mb-5">
             <button type="button" class="close close__confirm" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
 
-            <h5 class="modal-title modal-title__confirm" id="exampleModalLabel">Confirm Your Phone Number</h5>
-            <p class="modal-description">Please confirm your phone number Via SMS for extra security purposes of your
+            <h5 class="modal-confirm__title" id="exampleModalLabel">Confirm Your Phone Number</h5>
+            <p class="modal-confirm__description">Please confirm your phone number Via SMS for extra security purposes
+              of your
               account</p>
           </div>
 
-          <div class="modal-body modal-body__confirm">
-            <form class="modal-form">
-              <input class="modal-input" type="text" placeholder="Enter The 6 Digit Code">
-              <button class="btn modal-button modal-button_spinner modal-button__confirm" type="button text-capitalize">
-                Send SMS
-                Code </button>
+          <div class="modal-confirm__body mb-4">
+            <form class="modal-confirm__form">
 
-              <!-- <button class="btn modal-button modal-button_state-disabled" disabled type="button text-capitalize">
+
+              <div class="modal-confirm__edit-phone">
+                <input class="modal-phone__input" id="phone" type="tel">
+                <button class="btn modal-confirm__edit-button modal-confirm__button" type="button text-capitalize">
+                  edit
+                </button>
+              </div>
+
+              <!-- <span class="account__error-notify-message">All field required</span> -->
+
+              <div class="modal-confirm__send-code">
+                <input class="modal-confirm__input" type="text" placeholder="Enter The 6 Digit Code">
+                <button class="btn modal-confirm__button" type="button text-capitalize">
+                  Send Code
+                </button>
+              </div>
+
+              <!-- <button class="btn modal-button modal-confirm__button_state-disabled" disabled
+                type="button text-capitalize">
                 Code Send
               </button> -->
             </form>
 
           </div>
 
-          <div class="modal-footer modal-footer__confirm">
-            <p class="modal-footer-description mb-2">If you don't receive the SMS code in 1 to 2
+          <div class="modal-confirm__footer">
+            <p class="modal-confirm__footer-description modal-confirm__footer-wrapper mb-2">If you don't receive the SMS
+              code in 1 to 2
               minutes Please click
               here
               <a class="d-inline-block" href="#">&#40;Live Chat &#41;</a>
             </p>
-            <hr class="modal-footer__separator">
 
-            <p class="modal-footer-description">Provide the support team with the email you registered with and that
-              you
-              did not receive SMS</p>
+            <hr class="modal-confirm__footer-separator">
+
+            <p class="modal-confirm__footer-description modal-confirm__footer-wrapper  mb-5">
+              Provide the support team with the email you registered
+              with and that you did not receive SMS</p>
           </div>
-          </вшм>
+
+          <button class="btn modal-confirm__button-submit d-block m-auto" type="button">Submit</button>
         </div>
-
       </div>
+
     </div>
+  </div>
 
 
-    <!-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content modal-select-content">
+  <!-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-confirm__dialog">
+      <div class="modal-content modal-confirm__content">
 
-        <div role="img" class="modal-img">
+        <div role="img" class="modal-img modal-live__img">
           <a class="modal__logo mb-3" href="#">
             <img class="img-fluid" src="./adro-fx-logo.svg" alt="company logo" width="252" height="91">
             <span class="modal__logo-text d-block text-right text-white text-capitalize">the art oft
@@ -103,9 +125,9 @@
           </a>
 
 
-          <div class="modal__note-wrapper">
-            <p class="modal__required-notify mb-3">information</p>
-            <p class="modal__note">
+          <div class="modal-confirm__note-wrapper">
+            <p class="modal-confirm__required-notify mb-3">information</p>
+            <p class="modal-confirm__note">
               All fields are required, please fill them in,
               if you have any questions,you can ask
               them in the live chat</p>
@@ -115,20 +137,20 @@
 
         </div>
 
-        <div class="modal__main-content">
-          <div class="modal-header mb-5">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <div class="modal-confirm__main-content modal-confirm__live-account">
+          <div class="modal-confirm__header modal-confirm__live-header mb-5">
+            <button type="button" class="close live-account__close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
-            <h5 class="modal-title mb-2" id="exampleModalLabel">
+            <h5 class="modal-confirm__title  modal-confirm__live-title mb-2" id="exampleModalLabel">
               Open a Live Trading Account in couple of seconds!
             </h5>
-            <p class="modal-description">
+            <p class="modal-comfirm___description">
               Please fill in all the information below
             </p>
           </div>
 
-          <div class="modal-body modal-select-items mb-2">
+          <div class=" modal-confirm__select-items mb-2">
             <div class="container">
               <div class="d-flex justify-content-between">
                 <p class="account-currency__title">Trading Platform</p>
@@ -256,7 +278,7 @@
 
                 </div>
 
-                <div class="account-currency__selected error">
+                <div class="account-currency__selected  modal-confirm__error">
                   Select account leverage
                 </div>
 
@@ -269,23 +291,88 @@
             </div>
           </div>
 
-          <div class="modal-footer modal-footer-select">
-            <button class="btn modal-button text-capitalize" type="button">Open Account</button>
+          <div class="modal-confirm__live-footer">
+            <button class="btn modal-button modal-confirm__live-button text-capitalize" type="button">Open
+              Account</button>
           </div>
         </div>
       </div>
     </div>
   </div> -->
 
-    <script src="main.js"></script>
+
+  <script src="/main.js"></script>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+    crossorigin="anonymous"></script>
+
+  <script src="/js/intlTelInput.min.js"></script>
 
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-      crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
-      crossorigin="anonymous"></script>
+  <script>
+    $(document).ready(function () {
+      const input = document.querySelector("#phone")
+
+      intlTelInput(input, {
+        // whether or not to allow the dropdown
+        allowDropdown: true,
+
+        // if there is just a dial code in the input: remove it on blur, and re-add it on focus
+        autoHideDialCode: true,
+
+        // add a placeholder in the input with an example number for the selected country
+        autoPlaceholder: "polite",
+
+        // modify the auto placeholder
+        customPlaceholder: null,
+
+        // append menu to specified element
+        dropdownContainer: null,
+
+        // don't display these countries
+        excludeCountries: [],
+
+        // format the input value during initialisation and on setNumber
+        formatOnDisplay: true,
+
+        // geoIp lookup function
+        geoIpLookup: null,
+
+        // inject a hidden input with this name, and on submit, populate it with the result of getNumber
+        hiddenInput: "",
+
+        // initial country
+        initialCountry: "",
+
+        // localized country names e.g. { 'de': 'Deutschland' }
+        localizedCountries: null,
+
+        // don't insert international dial codes
+        nationalMode: true,
+
+        // display only these countries
+        onlyCountries: [],
+
+        // number type to use for placeholders
+        placeholderNumberType: "MOBILE",
+
+        // the countries at the top of the list. defaults to united states and united kingdom
+        preferredCountries: ["us", "ar"],
+
+        // display the country dial code next to the selected flag so it's not part of the typed number
+        separateDialCode: true,
+
+        // specify the path to the libphonenumber script to enable validation/formatting
+        utilsScript: "/js/utils.js"
+      });
+
+    })
+
+  </script>
 </body>
 
 </html>

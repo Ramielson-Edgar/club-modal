@@ -58,7 +58,9 @@ img {
   text-decoration: none;
 }
 
-
+.modal-confirm__search {
+  position: relative;
+}
 
 .modal-confirm__header {
   position: relative;
@@ -79,9 +81,9 @@ img {
   overflow: hidden;
   -ms-grid-columns: 315px 1fr;
   grid-template-columns: 315px 1fr;
-  background: #FFFFFF;
-  -webkit-box-shadow: 0px 50px 40px rgba(0, 0, 0, 0.25);
-  box-shadow: 0px 50px 40px rgba(0, 0, 0, 0.25);
+  background: #ffffff;
+  -webkit-box-shadow: 0px 50px 40px rgba(142, 142, 142, 0.3);
+  box-shadow: 0px 50px 40px rgba(136, 136, 136, 0.3);
 }
 
 .modal-confirm__description {
@@ -135,12 +137,12 @@ img {
 .modal-confirm__input {
   width: 100%;
   height: 74px;
-  border: 1px solid #EBEFF7;
+  border: 1px solid #ebeff7;
   border-radius: 10px;
   padding-left: 30px;
-  -webkit-transition: all .2s ease-in;
-  transition: all .2s ease-in;
-  background-color: #EBEFF7;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+  background-color: #ebeff7;
   color: #145be9;
 }
 
@@ -149,46 +151,50 @@ img {
   position: relative;
 }
 
+.modal-confirm__edit-phone .modal-phone__input {
+  transition: all 0.3s ease-in;
+}
+
 .modal-confirm__send-code {
   margin-top: 20px;
 }
 
 .modal-confirm__input::-webkit-input-placeholder {
   font-size: 15px;
-  color: #8496B9;
+  color: #8496b9;
   padding-left: 10px;
 }
 
 .modal-phone__input::-ms-input-placeholder,
 .modal-confirm__input:-ms-input-placeholder {
   font-size: 15px;
-  color: #8496B9;
+  color: #8496b9;
   padding-left: 8px;
 }
 
 .modal-phone__input::-ms-input-placeholder,
 .modal-confirm__input::-ms-input-placeholder {
   font-size: 15px;
-  color: #8496B9;
+  color: #8496b9;
   padding-left: 8px;
 }
 
 .modal-phone__input::placeholder,
 .modal-confirm__input::placeholder {
   font-size: 15px;
-  color: #8496B9;
+  color: #8496b9;
   padding-left: 10px;
 }
 
 .modal-phone__input:focus-visible,
 .modal-confirm__input:focus-visible {
-  border: 1px solid #55A9E7;
-  outline: #55A9E7;
+  border: 1px solid #55a9e7;
+  outline: #55a9e7;
 }
 
 .modal-phone__input {
   height: 74px;
-  border: 1px solid #EBEFF7;
+  border: 1px solid #ebeff7;
   background-color: transparent;
   margin-top: unset;
 }
@@ -197,22 +203,21 @@ img {
   font-family: "roboto";
   font-size: 16px;
   font-weight: 500;
-  color: #8496B9;
+  color: #8496b9;
 }
 
 .iti__flag-container::before {
   position: absolute;
   display: block;
-  content: '';
+  content: "";
 
   top: 26%;
   left: 90%;
   width: 1px;
   height: 50%;
 
-  background-color: #CECECE;
+  background-color: #cecece;
 }
-
 
 .modal-confirm__button-submit,
 .modal-confirm__button_state-disabled,
@@ -224,10 +229,10 @@ img {
   padding: 17px 27px;
   cursor: pointer;
   color: #fff;
-  background-color: #92B6FF;
+  background-color: #92b6ff;
   border-radius: 5px;
-  -webkit-transition: all .3s ease-in;
-  transition: all .3s ease-in;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
 }
 
 .modal-confirm__button-submit:hover,
@@ -253,28 +258,33 @@ img {
   top: 7px;
   right: 7px;
 
-  color: #92B6FF;
+  width: 132px;
+  height: 60px;
+  padding: 10px;
+
+  color: #92b6ff;
   background-color: transparent;
-  border: 1px solid #92B6FF;
-  padding: 17px 53px;
+  border: 1px solid #92b6ff;
+
+  transition: all 0.3s ease-in;
 }
 
 .modal-confirm__button-submit {
   position: unset;
-  background-color: #1F5DDA;
+  background-color: #1f5dda;
   padding: 17px 53px;
 }
 
 .modal-confirm__title {
   font-weight: 900;
-  color: #518BFF;
+  color: #518bff;
 }
 
 .modal-confirm__header .close {
   position: absolute;
   top: 20px;
   right: 30px;
-  color: #1F5DDA;
+  color: #1f5dda;
 }
 
 .modal-confirm__header .close:hover {
@@ -284,7 +294,7 @@ img {
 .modal-confirm__header .close::before {
   position: absolute;
   display: inline-block;
-  content: '';
+  content: "";
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
@@ -292,10 +302,10 @@ img {
   width: 30px;
   height: 30px;
   background: transparent;
-  border: 1px solid #1F5DDA;
+  border: 1px solid #1f5dda;
   border-radius: 7px;
-  -webkit-transition: all .2s ease-in;
-  transition: all .2s ease-in;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
 }
 
 .modal-confirm__header .close__confirm {
@@ -308,7 +318,7 @@ img {
 }
 
 .modal-confirm__header .close:hover::before {
-  border: 1px solid #1F5DDA;
+  border: 1px solid #1f5dda;
 }
 
 .modal-confirm__dialog {
@@ -316,16 +326,16 @@ img {
 }
 
 .modal-confirm__button.disabled {
-  border: 2px solid #C7C7C7;
+  border: 2px solid #c7c7c7;
   color: #505050;
   font-weight: 600;
-  background-color: #C7C7C7;
+  background-color: #c7c7c7;
 }
 
 .modal-confirm__select-items {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(261px, 1fr))[auto-fit];
+  -ms-grid-columns: (minmax(261px, 1fr)) [auto-fit];
   grid-template-columns: repeat(auto-fit, minmax(261px, 1fr));
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -338,7 +348,7 @@ img {
 .leverage,
 .trading-platform {
   border: none;
-  border-bottom: 1px solid #82898D;
+  border-bottom: 1px solid #82898d;
   padding-bottom: 10px;
   background: transparent;
   outline: none;
@@ -347,7 +357,7 @@ img {
 .account-balance-input {
   width: 261px;
   padding: 0;
-  color: #1F5DDA;
+  color: #1f5dda;
   text-transform: uppercase;
 }
 
@@ -394,9 +404,9 @@ img {
   height: 20px;
   margin-right: 8px;
   border-radius: 50%;
-  background-color: #54FFADDB;
-  -webkit-transition: all .1s ease-in;
-  transition: all .1s ease-in;
+  background-color: #54ffaddb;
+  -webkit-transition: all 0.1s ease-in;
+  transition: all 0.1s ease-in;
 }
 
 .modal-confirm__note {
@@ -424,7 +434,7 @@ img {
 .modal-confirm__required-notify::before {
   display: inline-block;
   text-align: center;
-  content: '';
+  content: "";
   width: 30px;
   height: 30px;
   border-radius: 50%;
@@ -432,7 +442,7 @@ img {
   background-repeat: no-repeat;
   background-position: 44% 3px;
   background-size: 35%;
-  background-color: #518BFF;
+  background-color: #518bff;
 }
 
 .account-currency__title {
@@ -447,12 +457,12 @@ img {
 }
 
 .account-currency__option {
-  -webkit-transition: all .3s ease-in;
-  transition: all .3s ease-in;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
 }
 
 .account-currency__option:hover {
-  color: #1F5DDA;
+  color: #1f5dda;
 }
 
 .account-currency__select-box {
@@ -468,12 +478,11 @@ img {
   flex-direction: column;
 }
 
-
 .account-currency__options-container {
   position: absolute;
   top: 0;
   left: 0;
-  background: #FBFBFB;
+  background: #fbfbfb;
   color: #f5f6fa;
   max-height: 0;
   width: 100%;
@@ -490,12 +499,11 @@ img {
 
 .iti__country-list {
   border-radius: 9px;
-  border: 1px solid #EBEFF7;
+  border: 1px solid #ebeff7;
 }
 
-
 .account-currency__selected {
-  border-bottom: 1px solid #82898D;
+  border-bottom: 1px solid #82898d;
   position: relative;
   -webkit-box-ordinal-group: 1;
   -ms-flex-order: 0;
@@ -516,7 +524,6 @@ img {
   transition: all 0.4s;
 }
 
-
 .iti__country-list,
 .account-currency__options-container.active {
   max-height: 240px;
@@ -526,7 +533,7 @@ img {
   overflow-y: scroll;
 }
 
-.account-currency__options-container.active+.selected::after {
+.account-currency__options-container.active + .selected::after {
   -webkit-transform: rotateX(180deg);
   transform: rotateX(180deg);
   top: 10px;
@@ -556,7 +563,7 @@ img {
 }
 
 .account-currency__option:hover {
-  background: #EBEFF7;
+  background: #ebeff7;
 }
 
 .account-currency__label {
@@ -578,16 +585,19 @@ img {
   max-width: 430px;
 }
 
-.modal-confirm__error-shape {border: 1px solid #FF8A8A !important;}
+.modal-confirm__error-shape {
+  border: 1px solid #ff8a8a !important;
+}
+
 .modal-confirm__error {
-  border-bottom: 1px solid #FF8A8A !important;
+  border-bottom: 1px solid #ff8a8a !important;
 }
 
 .account__error-notify-message {
   position: relative;
   top: 10px;
-  color: #FF8A8A;
-  transition: all .2s ease-in;
+  color: #ff8a8a;
+  transition: all 0.2s ease-in;
 }
 
 .account__error-notify {
@@ -595,7 +605,7 @@ img {
   background-position: center;
   background-repeat: no-repeat;
   background-size: 50%;
-  background-color: #FF8A8A;
+  background-color: #ff8a8a;
 }
 
 .modal-confirm__logo-text-text,
@@ -700,6 +710,10 @@ img {
   right: 10px;
 }
 
+/* .modal-confirm__form .iti.active .modal-confirm__button {
+  padding: 17px 20px !important;
+} */
+
 @media (max-width: 991.98px) {
   .modal-confirm__input::-webkit-input-placeholder {
     font-size: 13px;
@@ -783,14 +797,15 @@ img {
 @media (max-width: 576.98px) {
   .modal-confirm__note-wrapper {
     max-width: 430px;
-  }  .modal-confirm__send-code,
-    .modal-confirm__edit-phone {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      width: 100%;
-  
-    }
+  }
+
+  .modal-confirm__send-code,
+  .modal-confirm__edit-phone {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
 
   .modal-confirm__required-notify {
     margin: 0 auto;
@@ -861,9 +876,7 @@ img {
   }
 }
 
-
-@media (-webkit-min-device-pixel-ratio: 2),
-(min-resolution: 192dpi) {
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   .iti__flag {
     background-image: url("/flags@2x.png");
   }

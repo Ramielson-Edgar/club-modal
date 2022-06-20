@@ -31,3 +31,21 @@ function f() {
       a.closest(".account-currency__select-box").style.zIndex = "1";
     });
 }
+
+document
+  .querySelector(".modal-confirm__edit-button")
+  .addEventListener("click", () => {
+    document.querySelector(".iti").classList.toggle("active");
+
+    if (document.querySelector(".iti").classList.contains("active")) {
+      document.querySelector(".modal-phone__input-active").style.border =
+        "1px solid #145be9";
+
+      document.querySelector(".modal-confirm__edit-button").innerHTML =
+        "Confirm Edit";
+    } else {
+      document.querySelector(".modal-phone__input-active").style.border =
+        "1px solid #EBEFF7";
+      document.querySelector(".modal-confirm__edit-button").innerHTML = "edit";
+    }
+  });

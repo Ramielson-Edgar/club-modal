@@ -1,8 +1,12 @@
 .iti {
     position: relative;
     display: inline-block;
+    pointer-events: none;
 }
 
+.iti.active{
+        pointer-events: unset;
+}
 
 
 .iti * {
@@ -1534,8 +1538,10 @@
     background-image: url(../flags.png);
     background-repeat: no-repeat;
     background-color: #dbdbdb;
-    background-position: 20px 0
+    background-position: 20px 0; 
 }
+
+
 
 
 .modal-confirm__form .iti {

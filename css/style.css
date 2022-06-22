@@ -97,7 +97,7 @@ img {
   flex-direction: column;
   gap: 10px;
   border-top: none;
-  padding: 40px 0 0;
+  /* padding: 40px 0 0; */
 }
 
 .modal-confirm__footer .modal-footer-description {
@@ -125,13 +125,13 @@ img {
 }
 
 .modal-confirm__form {
-  max-width: 500px;
+  /* max-width: 500px; */
   position: relative;
 }
 
-.modal-confirm__form .iti {
+/* .modal-confirm__form .iti {
   max-width: 500px;
-}
+} */
 
 .modal-phone__input,
 .modal-confirm__input {
@@ -246,6 +246,7 @@ img {
   background-color: #7dc9ff;
   color: #fff;
 }
+
 
 .modal-confirm__button_state-disabled:disabled {
   background: #768298;

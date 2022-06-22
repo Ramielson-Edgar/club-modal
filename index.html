@@ -12,7 +12,7 @@
 
   <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
 
-  <link rel="stylesheet" href="css/intlTelInput.min.css">
+  <link rel="stylesheet" href="css/confirm-sms__intlTelInput.min.css">
   <link rel="stylesheet" href="css/style.css" />
 
   <title>Document</title>
@@ -48,7 +48,7 @@
             </p>
           </div>
 
-          <p class="modal-confirm__logo-text text-white">More than just <strong>Broker</strong></p>
+          <p class="modal-confirm__logo-text text-white">More than just a <strong>Broker</strong></p>
 
         </div>
 
@@ -71,28 +71,32 @@
               <div class="modal-confirm__edit-phone">
                 <input class="modal-phone__input modal-phone__input-active" id="phone" type="tel">
                 <button class="btn modal-confirm__edit-button modal-confirm__button" type="button text-capitalize">
-                  edit
+                  Edit
                 </button>
               </div>
 
               <!-- <span class="account__error-notify-message">All field required</span> -->
 
-              <div class="modal-confirm__send-code">
+              <div class="modal-confirm__send-code mb-3">
                 <input class="modal-confirm__input" type="text" placeholder="Enter The 6 Digit Code">
-                <button class="btn modal-confirm__button" type="button text-capitalize">
+                <!-- <button class="btn modal-confirm__button" type="button text-capitalize">
                   Send Code
+                </button> -->
+
+                <button class="btn modal-button modal-confirm__button_state-disabled" disabled
+                  type="button text-capitalize">
+                  Code Send
                 </button>
+
               </div>
 
-              <!-- <button class="btn modal-button modal-confirm__button_state-disabled" disabled
-                type="button text-capitalize">
-                Code Send
-              </button> -->
+
             </div>
 
+            <button class="btn modal-confirm__button-submit d-block m-auto" type="button">Submit</button>
           </div>
 
-          <div class="modal-confirm__footer">
+          <div class="modal-confirm__footer modal-confirm__footer-sms">
             <p class="modal-confirm__footer-description modal-confirm__footer-wrapper mb-2">If you don't receive the
               SMS
               code in 1 to 2
@@ -103,12 +107,10 @@
 
             <hr class="modal-confirm__footer-separator">
 
-            <p class="modal-confirm__footer-description modal-confirm__footer-wrapper  mb-5">
+            <p class="modal-confirm__footer-description modal-confirm__footer-wrapper">
               Provide the support team with the email you registered
               with and that you did not receive SMS</p>
           </div>
-
-          <button class="btn modal-confirm__button-submit d-block m-auto" type="button">Submit</button>
         </div>
       </div>
 
